@@ -1,0 +1,35 @@
+{
+    "apiVersion": "apps/v1",
+    "kind": "Deployment",
+    "metadata": {
+        "name": "comingsoon"
+    },
+    "spec": {
+        "replicas": 3,
+        "selector": {
+            "matchLabels": {
+                "app": "comingsoon"
+            }
+        },
+        "template": {
+            "metadata": {
+                "labels": {
+                    "app": "comingsoon"
+                }
+            },
+            "spec": {
+                "containers": [{
+                    "name": "comingsoon",
+                    "image": "<IMAGE>",
+                    "imagePullPolicy": "Always",
+                    "ports": [{
+                        "containerPort": 80
+                    }]
+                }],
+                "imagePullSecrets": [{
+                    "name": "github"
+                }]
+            }
+        }
+    }
+}
