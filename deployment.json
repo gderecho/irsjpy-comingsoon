@@ -2,7 +2,8 @@
     "apiVersion": "apps/v1",
     "kind": "Deployment",
     "metadata": {
-        "name": "comingsoon"
+        "name": "comingsoon",
+        "namespace": "<NAMESPACE>"
     },
     "spec": {
         "replicas": 3,
